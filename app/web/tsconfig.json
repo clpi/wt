@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["../../tsconfig.json"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "importHelpers": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "tsBuildInfoFile": "dist/typecheck.tsbuildinfo",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "useUnknownInCatchVariables": false
+  }
+}

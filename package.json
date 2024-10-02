@@ -1,0 +1,43 @@
+{
+  "name": "wt",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "readme": "README.md",
+  "engines": {
+    "pnpm": ">=9.5",
+    "node": ">=20.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "packageManager": "pnpm@9.6.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "turbo clean --parallel",
+    "deploy": "turbo deploy",
+    "dev": "turbo dev --parallel --env-mode=loose",
+    "build": "turbo build",
+    "build:web": "turbo build --filter=web",
+    "docker": "cd docker && docker-compose up",
+    "test": "turbo test"
+  },
+  "workspaces": {
+    "packages": [
+      "pkg/*",
+      "app/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}

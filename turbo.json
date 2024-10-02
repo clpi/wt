@@ -1,0 +1,31 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "daemon": false,
+  "ui": "stream",
+  "globalEnv": [],
+  "globalDependencies": [],
+  "tasks": {
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^clean", "^build"],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "cache": false,
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^build"]
+    },
+    "deploy": {
+      "cache": false,
+      "dependsOn": ["^build"]
+    }
+  }
+}

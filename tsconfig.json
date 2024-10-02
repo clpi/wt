@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist",
+    "incremental": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "lib": ["esnext", "dom", "scripthost", "dom.iterable", "esnext.decorators"],
+    "plugins": [{ "name": "next" }],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "jsx": "preserve",
+    "strict": true,
+    "declaration": false,
+    "declarationMap": false,
+    "resolveJsonModule": true
+  }
+}
