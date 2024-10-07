@@ -1,0 +1,8 @@
+name = "wt"
+compatibility_date = "2024-03-20"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "D1"
+database_name = "wtdb"
+database_id = "97f826ff-19d3-4897-9bb5-a713bf64a313"

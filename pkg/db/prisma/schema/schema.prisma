@@ -1,0 +1,24 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["deno", "driverAdapters", "fullTextIndex", "fullTextSearch", "metrics", "multiSchema", "nativeDistinct", "postgresqlExtensions", "tracing", "views", "relationJoins", "prismaSchemaFolder", "typedSql"]
+  binaryTargets   = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = "postgresql://dbmasteruser:Abel699--__@ls-661caea189ae694f7de0065dce141fe5cf0d8e80.cbo000uw6nnu.us-west-2.rds.amazonaws.com:5432/postgres"
+  directUrl  = "postgresql://dbmasteruser:Abel699--__@ls-661caea189ae694f7de0065dce141fe5cf0d8e80.cbo000uw6nnu.us-west-2.rds.amazonaws.com:5432/postgres"
+  extensions = [citext, pgcrypto, uuid_ossp(map: "uuid-ossp")]
+}
+
+model Post {
+  id        String   @id @default(uuid()) @db.Uuid
+  slug      String   @unique
+  userId    String
+  title     String
+  content   String
+  public    Boolean  @default(false)
+  views     Int      @default(0)
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+}

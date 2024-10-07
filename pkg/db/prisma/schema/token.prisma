@@ -1,0 +1,5 @@
+model AuthToken {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+}

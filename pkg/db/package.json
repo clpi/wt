@@ -2,11 +2,34 @@
   "name": "db",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devel": "ts-node src/index.ts",
+    "dev": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma:introspect": "prisma introspect",
+    "prisma:dev": "prisma migrate dev",
+    "prisma:prod": "prisma migrate prod",
+    "prisma:studio": "prisma migrate studio",
+    "prisma:generate": "prisma generate",
+    "prisma:validate": "prisma validate",
+    "gen": "prisma generate",
+    "push": "prisma db push",
+    "pull": "prisma db pull"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@prisma/extension-pulse": "^1.2.0",
+    "@types/node": "^22.7.4",
+    "prisma": "^5.20.0",
+    "ts-node": "^10.9.2"
+  },
+  "prisma": {
+    "eseed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0"
+  }
 }

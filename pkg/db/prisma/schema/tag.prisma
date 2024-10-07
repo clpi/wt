@@ -1,0 +1,16 @@
+model Tag {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  color     String   @default("blue")
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+}
+
+model LinkTag {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+  tagId     String   @unique
+
+  @@index([tagId])
+}
