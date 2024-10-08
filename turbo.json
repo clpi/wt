@@ -3,7 +3,10 @@
   "daemon": false,
   "ui": "stream",
   "globalEnv": [],
-  "globalDependencies": [],
+  "globalDependencies": [
+    ".env",
+    "./**/*.env"
+  ],
   "tasks": {
     "clean": {
       "cache": false

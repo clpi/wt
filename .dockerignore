@@ -1,6 +1,7 @@
 node_modules
 assets
 .git
+.devcontainer
 .github
 pkg/**/node_modules
 app/**/node_modules
@@ -10,6 +11,7 @@ pkg/**/.turbo
 app/**/.turbo
 .idea
 dist
+.cursorrules
 .vscode
 dist
 .DS_Store
